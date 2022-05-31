@@ -22,26 +22,13 @@ export function Search () {
 export function QueryOpenLibrary() {
     const [books, setBooks] = useState([])
 
-
-/* 
-    let url = "http://openlibrary.org/search.json?q="
-    let options = {
-        method: 'POST',
-        url: url,
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json;charset=UTF-8'
-        },
-        data: {
-            limit: 5,
-            fields: title,key,author_name,isbn
-        }
-    };
- */
-
-
     useEffect(() => {
-    axios.get('http://openlibrary.org/search.json?q=the saboteurs&limit=5&fields=title,cover_i,key,author_name,isbn')
+    axios.get('http://openlibrary.org/search.json?q=the saboteurs', {
+        params: {
+            limit: '5',
+            fields:'title,cover_i,key,author_name,isbn'
+        }
+    })
         .then(response => {
             console.log(response)
             setBooks(response.data.docs)
@@ -75,6 +62,3 @@ export function QueryOpenLibrary() {
 
 }
 export default Search
-
-
-
