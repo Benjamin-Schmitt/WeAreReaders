@@ -5,7 +5,6 @@ import { QueryOpenLibrary } from './search.jsx';
 function App() {
   return (
     <div className="App">
-      <Search />
       <QueryOpenLibrary />
 
 
