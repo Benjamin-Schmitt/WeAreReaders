@@ -1,27 +1,11 @@
 import './App.css';
-import { Search } from './search.jsx';
-import { QueryOpenLibrary } from './search.jsx';
+import { SearchBooks } from './search.jsx';
+
 
 function App() {
   return (
     <div className="App">
-      <QueryOpenLibrary />
-
-
-      {/* <div className="area" >                    
-                  <ul className="circles">                                   
-                          <li></li>
-                          <li></li>                          
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                          <li></li>
-                  </ul>
-          </div > */}
+      <SearchBooks />
     </div>
   );
 }
