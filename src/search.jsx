@@ -29,10 +29,12 @@ export function SearchBooks() {
                     type="text" 
                     name="books" 
                     id="books" 
-                    placeholder="search for books"            
+                    placeholder="search for books"   
+                    required        
                     />
                     <br />
-                    <button type="submit">search</button>
+                    <button class='submit' type="submit">Search</button>
+                    <button class='reset' type="submit">reset</button>
                 </fieldset>
             </form>
             </div> 

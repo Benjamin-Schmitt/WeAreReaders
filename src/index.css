@@ -1,37 +1,87 @@
-/* BACKGROUND */
+/* bg stuff */
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
-
-/*** applies to everything ***/
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: auto;
+    padding: 0;
     max-width: 1000px;
 }
 
 body{
     font-family: 'Exo', sans-serif;
-    background: rgb(128, 128, 128);
+    background: white;
 }
 
 /*** input ***/
-input {
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:black;
     background: white;
-    min-width: 25%;
-    height: 25px;
+}
+.input {
+    border-style: none;
+    border: 2px solid black;
+    color: black;    
+    background: white;
+    min-width: 250px;
+    height: auto;
     text-align: center;
     font-size: larger;
 }
 
-button {
-    text-align: center;
-    min-width: 7%;
+input:focus::placeholder {
+    color: transparent;
+  }
+
+.submit {
+    border: none;
+    border-radius: 5%;    
+    background: orange;
+    font-weight: bold;
+    text-align: center;    
+    min-width: 60px;
     height: 25px;
-    margin: 5px;
+    margin: 5px;    
 }
 
+.submit:hover {
+    border: 2px solid black;
+    border-radius: 5%;    
+    background: orange;
+    font-weight: bold;
+    text-align: center;    
+    min-width: 60px;
+    height: 25px;
+    margin: 5px;    
+}
+
+.reset {
+    border: none;
+    border-radius: 5%;
+    background: white;
+    font-weight: bold;
+    text-align: center;    
+    min-width: 60px;
+    height: 25px;
+    margin: 5px;    
+}
+
+.reset:hover {
+    border: 2px solid black;
+    border-radius: 5%;
+    
+    background: white;
+    font-weight: bold;
+    text-align: center;
+    
+    min-width: 60px;
+    height: 25px;
+    margin: 5px;    
+}
+
+
 fieldset {
-    border:3px solid black;
+    margin: 0 25px 0 25px;
+    border:3px solid black var(--color-shadow, currentColor);
     border-radius: var(--size-radius);
     border: 3px solid var(--color-shadow, currentColor);
     box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
@@ -39,7 +89,6 @@ fieldset {
 }
 
 legend {
-    padding: 0.2em 0.5em;
     color: black;
     font-size: 175%;
     position: relative;
@@ -56,6 +105,8 @@ legend {
 }
 
 li {
+    list-style: none;
     border: 2px solid black;
     margin: 10px;
 }
+
