@@ -5,11 +5,16 @@
     margin: auto;
     padding: 0;
     max-width: 1000px;
+    font-family: 'Gentium Book Basic', serif;
 }
 
-body{
+body {
     font-family: 'Exo', sans-serif;
-    background: white;
+    /* background-image: url(/img/buch.jpg); */
+}
+
+a {
+    text-decoration: none;
 }
 
 /*** input ***/
@@ -26,11 +31,12 @@ body{
     height: auto;
     text-align: center;
     font-size: larger;
+    caret-color: black;
 }
-
 input:focus::placeholder {
     color: transparent;
-  }
+}
+
 
 .submit {
     border: none;
@@ -40,7 +46,7 @@ input:focus::placeholder {
     text-align: center;    
     min-width: 60px;
     height: 25px;
-    margin: 5px;    
+    margin: 5px 5px 5px 0px;    
 }
 
 .submit:hover {
@@ -51,7 +57,7 @@ input:focus::placeholder {
     text-align: center;    
     min-width: 60px;
     height: 25px;
-    margin: 5px;    
+    margin: 5px 5px 5px 0;      
 }
 
 .reset {
@@ -67,12 +73,10 @@ input:focus::placeholder {
 
 .reset:hover {
     border: 2px solid black;
-    border-radius: 5%;
-    
+    border-radius: 5%;    
     background: white;
     font-weight: bold;
-    text-align: center;
-    
+    text-align: center;    
     min-width: 60px;
     height: 25px;
     margin: 5px;    
@@ -80,11 +84,13 @@ input:focus::placeholder {
 
 
 fieldset {
+    height: 125px;
+    background-image: url(/img/buch_4.png);
     margin: 0 25px 0 25px;
-    border:3px solid black var(--color-shadow, currentColor);
-    border-radius: var(--size-radius);
+    /* border:3px solid red var(--color-shadow, currentColor); */
+    /* border-radius: var(--size-radius); */
     border: 3px solid var(--color-shadow, currentColor);
-    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+    /* box-shadow: .5rem .5rem 0 rgb(15, 129, 181); */
     margin-bottom: 20px;
 }
 
@@ -110,3 +116,108 @@ li {
     margin: 10px;
 }
 
+/* output */
+.saleButton {
+    background: orange;
+    color: black;
+    border: none;
+    border-radius: 5%;
+    font-weight: bold;
+    text-align: center;    
+    min-width: 60px;
+    height: 25px;
+    margin: 5px; 
+}
+.saleButton:hover {
+    background: orange;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5%;
+    font-weight: bold;
+    text-align: center;    
+    min-width: 60px;
+    height: 25px;
+    margin: 5px; 
+}
+.saleLink {
+    color: black;
+}
+.bookNotAvailable {
+    font-size: 12px;
+    background: red;
+    width: 128px;
+    border-radius: 2%;
+    margin-bottom: 5px;
+}
+
+.listButton {
+    background: gray;
+    color: black;
+    border: none;
+    border-radius: 5%;
+    font-weight: bold;
+    text-align: center;    
+    min-width: 75px;
+    height: 25px;
+    margin: 5px; 
+}
+.listButton:hover {
+    background: white;
+    border: solid 2px black;
+    color: black;
+    border-radius: 5%;
+    font-weight: bold;
+    text-align: center;    
+    min-width: 75px;
+    height: 25px;
+    margin: 5px; 
+}
+
+.output {
+    background-color: white !important;
+    width: 250px;
+}
+
+
+.myList {
+    background: rgb(179, 207, 55);
+    color: black;
+    border: none;
+    border-radius: 5%;
+    font-weight: bold;
+    text-align: center;    
+    min-width: 75px;
+    height: 25px;
+    margin: 5px 0px 5px 5px;    
+}
+
+
+.myList:hover {
+    background: rgb(26, 225, 122);
+    color: black;
+    border: 2px solid black;
+    border-radius: 5%;
+    font-weight: bold;
+    text-align: center;    
+    min-width: 75px;
+    height: 25px;
+    margin: 5px 0px 5px 5px;   
+}
+
+label {
+    font-size: 25px;
+    font-weight: bold;
+}
+.theList {
+    margin-top: 50px;
+    max-width: 942px;
+    height: 417px;
+    background-image: url(/img/uc.png);
+}
+
+.nav {
+    width: 254px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

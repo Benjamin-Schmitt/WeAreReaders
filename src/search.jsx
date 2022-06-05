@@ -18,7 +18,7 @@ export function SearchBooks() {
 
     return (
         <div>            
-            <div className="box">
+            <div>
             <h1>We Are Readers</h1>
             <form onSubmit={handleSubmit}>
                 <fieldset>
@@ -33,28 +33,34 @@ export function SearchBooks() {
                     required        
                     />
                     <br />
-                    <button class='submit' type="submit">Search</button>
-                    <button class='reset' type="submit">reset</button>
+                    <nav className="nav">
+                        <button class='submit' type="submit">Search</button>
+                        <button class='reset' type="submit">reset</button>
+                        <button class='myList' type="submit">my List</button>
+                    </nav>
                 </fieldset>
             </form>
             </div> 
 
 
-            <ul>
+            <ul className="output">
                 {                
                 books.map((book, index) => {
                     let cover = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail;
                     let sale = null;
                     let saleButton = null;
+                    let listButton = null;
                     
                     function forSale() {
                         if(book.saleInfo.buyLink) {
                             sale = book.saleInfo.buyLink;
-                            return (saleButton = <button><a href={sale}>kaufen</a></button>)
+                            return ([saleButton = <button className="saleButton"><a href={sale} className="saleLink">kaufen</a></button>,
+                            <button className="listButton">add to list</button>
+                        ])
                         } 
                         else {
                             sale = book.saleInfo.saleability;
-                            return (saleButton = <p>Buch nicht bei Google erhältlich</p>)
+                            return (saleButton = <p className="bookNotAvailable">nicht erhältlich</p>)
                         }
                     }
                     
@@ -71,6 +77,14 @@ export function SearchBooks() {
                     })
                 }
             </ul>
+            
+
+            <label>Your Library Is Being Built</label>
+            <h2>We build for your convenience; 
+                <br />our IT God forgot to leave instructions</h2>
+            <div className="theList" id="list">
+            </div>
+
         </div>
     )
 }
