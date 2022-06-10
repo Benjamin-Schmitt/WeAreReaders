@@ -87,12 +87,12 @@ input:focus::placeholder {
 
 fieldset {
     height: 125px;
-    /* background-image: url(/img/buch_4.png); */
+    background-image: url(/img/buch_4.png);
     margin: 0 25px 0 25px;
     border:3px solid red var(--color-shadow, currentColor);
     border-radius: 4px;
     border: 3px solid var(--color-shadow, currentColor);
-    box-shadow: .5rem .5rem 0 orange;
+    /* box-shadow: .5rem .5rem 0 orange; */
     margin-bottom: 20px;
 }
 
@@ -112,11 +112,23 @@ legend {
     background: white !important;
 }
 
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} 
+
+
 li {
     list-style: none;
     border: 2px solid black;
-    margin: 10px;
+   /*  border-radius: 4px; */
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
+
+
 
 /* output */
 .saleButton {
@@ -129,6 +141,7 @@ li {
     min-width: 60px;
     height: 25px;
     margin: 5px; 
+    padding: 0;
 }
 .saleButton:hover {
     background: orange;
@@ -140,15 +153,28 @@ li {
     min-width: 60px;
     height: 25px;
     margin: 5px; 
+    padding: 0;
 }
 .saleLink {
+    margin: 5px;
     color: black;
+    text-decoration: none;
+    padding: 0;
 }
+.saleLink:hover {
+    margin: 5px;
+    color: black;
+    text-decoration: none;
+    padding: 0;
+}
+
+
 .bookNotAvailable {
     font-size: 12px;
     background: red;
     width: 128px;
     border-radius: 2%;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -161,7 +187,8 @@ li {
     text-align: center;    
     min-width: 75px;
     height: 25px;
-    margin: 5px; 
+    margin: 5px;
+    padding: 0;
 }
 .listButton:hover {
     background: white;
@@ -173,6 +200,7 @@ li {
     min-width: 75px;
     height: 25px;
     margin: 5px; 
+    padding: 0;
 }
 
 .output {
