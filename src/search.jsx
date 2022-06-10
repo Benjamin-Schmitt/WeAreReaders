@@ -66,9 +66,10 @@ export function SearchBooks() {
                     if(cover!=undefined) {
                     return (                        
                             <li key={index}>                            
-                                    {book.volumeInfo.title} <br></br> by <br></br>   
-                                    {book.volumeInfo.authors} <br></br>  
-                                    <img src={cover} alt=""/> <br></br>
+                                    {book.volumeInfo.title} <br />
+                                    by <br />   
+                                    {book.volumeInfo.authors} <br />  
+                                    <img src={cover} alt=""/> <br />
                                     {forSale()}
                             </li>
                         )
