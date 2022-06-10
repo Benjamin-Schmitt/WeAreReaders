@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Exo', sans-serif;
-    /* background-image: url(/img/buch.jpg); */
+    background-color: aliceblue;
 }
 
 a {
@@ -47,7 +47,7 @@ input:focus::placeholder {
     text-align: center;    
     min-width: 60px;
     height: 25px;
-    margin: 5px 5px 5px 0px;    
+    margin: 5px 5px 5px 0px;   
 }
 
 .submit:hover {
@@ -58,7 +58,8 @@ input:focus::placeholder {
     text-align: center;    
     min-width: 60px;
     height: 25px;
-    margin: 5px 5px 5px 0;      
+    margin: 5px 5px 5px 0;
+    cursor: pointer;    
 }
 
 .reset {
@@ -70,7 +71,8 @@ input:focus::placeholder {
     text-align: center;    
     min-width: 60px;
     height: 25px;
-    margin: 5px;    
+    margin: 5px;
+    cursor: pointer;   
 }
 
 .reset:hover {
@@ -201,6 +203,7 @@ li {
     height: 25px;
     margin: 5px; 
     padding: 0;
+    cursor: pointer;
 }
 
 .output {
@@ -232,7 +235,8 @@ li {
     text-align: center;    
     min-width: 75px;
     height: 25px;
-    margin: 5px 0px 5px 5px;   
+    margin: 5px 0px 5px 5px;
+    cursor: pointer;  
 }
 
 label {
