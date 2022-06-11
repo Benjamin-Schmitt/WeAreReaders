@@ -10,7 +10,11 @@
 
 body {
     font-family: 'Exo', sans-serif;
-    /* background-image: url(/img/buch.jpg); */
+    background-color: aliceblue;
+}
+
+li {
+    background-color: rgb(0, 255, 170);
 }
 
 a {
@@ -43,10 +47,11 @@ input:focus::placeholder {
     border-radius: 5%;    
     background: orange;
     font-weight: bold;
+    font-size: 15px;
     text-align: center;    
     min-width: 60px;
     height: 25px;
-    margin: 5px 5px 5px 0px;    
+    margin: 5px 5px 5px 0px;   
 }
 
 .submit:hover {
@@ -57,7 +62,8 @@ input:focus::placeholder {
     text-align: center;    
     min-width: 60px;
     height: 25px;
-    margin: 5px 5px 5px 0;      
+    margin: 5px 5px 5px 0;
+    cursor: pointer;    
 }
 
 .reset {
@@ -65,10 +71,12 @@ input:focus::placeholder {
     border-radius: 5%;
     background: white;
     font-weight: bold;
+    font-size: 15px;
     text-align: center;    
     min-width: 60px;
     height: 25px;
-    margin: 5px;    
+    margin: 5px;
+    cursor: pointer;   
 }
 
 .reset:hover {
@@ -87,10 +95,10 @@ fieldset {
     height: 125px;
     background-image: url(/img/buch_4.png);
     margin: 0 25px 0 25px;
-    /* border:3px solid red var(--color-shadow, currentColor); */
-    /* border-radius: var(--size-radius); */
+    border:3px solid red var(--color-shadow, currentColor);
+    border-radius: 4px;
     border: 3px solid var(--color-shadow, currentColor);
-    /* box-shadow: .5rem .5rem 0 rgb(15, 129, 181); */
+    /* box-shadow: .5rem .5rem 0 orange; */
     margin-bottom: 20px;
 }
 
@@ -110,11 +118,23 @@ legend {
     background: white !important;
 }
 
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} 
+
+
 li {
     list-style: none;
     border: 2px solid black;
-    margin: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
+
+
 
 /* output */
 .saleButton {
@@ -127,6 +147,7 @@ li {
     min-width: 60px;
     height: 25px;
     margin: 5px; 
+    padding: 0;
 }
 .saleButton:hover {
     background: orange;
@@ -138,15 +159,28 @@ li {
     min-width: 60px;
     height: 25px;
     margin: 5px; 
+    padding: 0;
 }
 .saleLink {
+    margin: 5px;
     color: black;
+    text-decoration: none;
+    padding: 0;
 }
+.saleLink:hover {
+    margin: 5px;
+    color: black;
+    text-decoration: none;
+    padding: 0;
+}
+
+
 .bookNotAvailable {
     font-size: 12px;
     background: red;
     width: 128px;
     border-radius: 2%;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
@@ -159,7 +193,8 @@ li {
     text-align: center;    
     min-width: 75px;
     height: 25px;
-    margin: 5px; 
+    margin: 5px;
+    padding: 0;
 }
 .listButton:hover {
     background: white;
@@ -171,10 +206,12 @@ li {
     min-width: 75px;
     height: 25px;
     margin: 5px; 
+    padding: 0;
+    cursor: pointer;
 }
 
 .output {
-    background-color: white !important;
+    background-color: aliceblue !important;
     width: 250px;
 }
 
@@ -185,6 +222,7 @@ li {
     border: none;
     border-radius: 5%;
     font-weight: bold;
+    font-size: 15px;
     text-align: center;    
     min-width: 75px;
     height: 25px;
@@ -201,7 +239,8 @@ li {
     text-align: center;    
     min-width: 75px;
     height: 25px;
-    margin: 5px 0px 5px 5px;   
+    margin: 5px 0px 5px 5px;
+    cursor: pointer;  
 }
 
 label {
@@ -212,7 +251,7 @@ label {
     margin-top: 50px;
     max-width: 942px;
     height: 417px;
-    background-image: url(/img/uc.png);
+    /* background-image: url(/img/uc.png); */
 }
 
 .nav {

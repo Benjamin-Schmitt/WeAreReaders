@@ -17,7 +17,7 @@ export function SearchBooks() {
         }
 
     return (
-        <div>            
+        <div>
             <div>
             <h1>We Are Readers</h1>
             <form onSubmit={handleSubmit}>
@@ -34,14 +34,13 @@ export function SearchBooks() {
                     />
                     <br />
                     <nav className="nav">
-                        <button class='submit' type="submit">Search</button>
-                        <button class='reset' type="submit">reset</button>
-                        <button class='myList' type="submit">my List</button>
+                        <button className='submit' type="submit">Search</button>
+                        <button className='reset' type="submit">reset</button>
+                        <button className='myList' type="submit">my List</button>
                     </nav>
                 </fieldset>
             </form>
-            </div> 
-
+            </div>
 
             <ul className="output">
                 {                
@@ -65,26 +64,19 @@ export function SearchBooks() {
                     }
                     
                     if(cover!=undefined) {
-                    return (
-                        <li key={index}>
-                            {book.volumeInfo.title} <br></br> by <br></br>   
-                            {book.volumeInfo.authors} <br></br>  
-                            <img src={cover} alt=""/> <br></br>
-                            {forSale()}
-                        </li>
+                    return (                        
+                            <li key={index}>                            
+                                    {book.volumeInfo.title} <br />
+                                    by <br />   
+                                    {book.volumeInfo.authors} <br />  
+                                    <img src={cover} alt=""/> <br />
+                                    {forSale()}
+                            </li>
                         )
                     }
                     })
                 }
-            </ul>
-            
-
-            <label>Your Library Is Being Built</label>
-            <h2>We build for your convenience; 
-                <br />our IT God forgot to leave instructions</h2>
-            <div className="theList" id="list">
-            </div>
-
+            </ul>           
         </div>
     )
 }

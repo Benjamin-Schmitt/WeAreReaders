@@ -1,5 +1,6 @@
 import './App.css';
 import { SearchBooks } from './search.jsx';
+import { NavBar } from './nav.jsx'
 
 
 function App() {
@@ -9,5 +10,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
