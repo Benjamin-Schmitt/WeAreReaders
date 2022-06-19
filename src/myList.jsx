@@ -6,7 +6,7 @@ export function MyList(props) {
     return (
     <div className="innerbox_right">
         <h1>Your List of Books</h1>
-        <label>buy, share, resell</label>
+        <label>publish, buy, share, resell</label>
         <ul>                       
           {
             props.clickedBooks.map(

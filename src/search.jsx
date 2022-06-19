@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { MyList } from './myList.jsx';
+import { NavBar } from './nav.jsx';
 
 export function SearchBooks() {   
     const [books, setBooks] = useState([]);
@@ -21,10 +22,12 @@ export function SearchBooks() {
         console.log(clickedBooks)
 
     return (
-        <div className="box">
-            <div className="innerbox_left">            
+        <div className="box">            
+            <div className="innerbox_left">
+            <h1>We Are Readers</h1>
+            <NavBar />          
                 <form onSubmit={handleSubmit}>
-                    <h1>We Are Readers</h1>
+                    
                     <fieldset>   
                     <legend>Search For Books</legend>
                         <input
@@ -55,10 +58,24 @@ export function SearchBooks() {
 
                         function addBooks() {
                             setClickedBooks(clickedBooks => [...clickedBooks, book.volumeInfo]);
-                            console.log(clickedBooks)
-                        /*  clickedBooks.push(book.volumeInfo.title) */
                         }
                         
+                        function title() {
+                            if (book.volumeInfo.title) {
+                                return book.volumeInfo.title
+                            } else {
+                                return "No Title available"
+                            }
+                        }
+
+                        function author() {
+                            if (book.volumeInfo.authors) {
+                                return book.volumeInfo.authors
+                            } else {
+                                return "No Author available"
+                            }
+                        }
+
                         function forSale() {
                             if(book.saleInfo.buyLink) {
                                 sale = book.saleInfo.buyLink;
@@ -68,16 +85,20 @@ export function SearchBooks() {
                             } 
                             else {
                                 sale = book.saleInfo.saleability;
-                                return (saleButton = <p className="bookNotAvailable">nicht erhältlich</p>)
+                                return (
+                                    <button className="notAv">
+                                        nicht erhältlich
+                                    </button>
+                                    )
                             }
                         }
                         
                         if(cover!=undefined) {
                         return (                        
-                                <li key={index}>                            
-                                        {book.volumeInfo.title} <br />
+                                <li key={index}>                         
+                                        {title()} <br />
                                         by <br />   
-                                        {book.volumeInfo.authors} <br />  
+                                        {author()} <br />  
                                         <img src={cover} alt=""/> <br />
                                         {forSale()}
                                 </li>
