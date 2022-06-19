@@ -1,21 +1,9 @@
 /* bg stuff */
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
-*{
-    margin: auto;
-    padding: 0;
-    max-width: 1000px;
-    font-family: 'Gentium Book Basic', serif;
-}
-
 body {
     font-family: 'Exo', sans-serif;
     /* background-color: aliceblue; */
-    background-color: white;
-}
-
-li {
-    /* background-color: rgb(0, 255, 170); */
     background-color: white;
 }
 
@@ -96,7 +84,7 @@ fieldset {
     height: 125px;
     /* background-image: url(/img/buch_4.png); */
     margin: 0 25px 0 25px;
-    border:3px solid red var(--color-shadow, currentColor);
+    /* border:3px solid red var(--color-shadow, currentColor); */
     border-radius: 4px;
     border: 3px solid var(--color-shadow, currentColor);
     /* box-shadow: .5rem .5rem 0 orange; */
@@ -118,11 +106,10 @@ legend {
     background: white !important;
 }
 
-.flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-} 
+ul {
+    margin: 0;
+    padding: 0; 
+}
 
 li {
     list-style: none;
@@ -208,8 +195,7 @@ li {
 }
 
 .output {
-    background-color: aliceblue !important;
-    width: 250px;
+    margin-right: 2.5%;
 }
 
 .myList {
@@ -225,10 +211,29 @@ li {
     margin: 5px 0px 5px 5px;    
 }
 
+
+/* LAYOUT */
 .box {
+    margin: auto;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
 }
+
+.innerbox_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;  
+    margin-right: 2.5%;
+}
+
+.innerbox_right {
+    margin-left: 2.5%;
+}
+
+
 
 .myList:hover {
     /* background: rgb(26, 225, 122); */
@@ -243,18 +248,10 @@ li {
     cursor: pointer;  
 }
 
-.list-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    border: 1px solid black;
-}
-.list-group-item {
-    border: 1px dotted black;
-    margin: 0;
-    padding: 0;
-}
+/* .list-group {
+    border: 10px solid black;
+} */
+
 
 label {
     font-size: 25px;
@@ -267,9 +264,9 @@ label {
     /* background-image: url(/img/uc.png); */
 }
 
-.nav {
+/* .nav {
     width: 254px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
