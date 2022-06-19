@@ -1,10 +1,26 @@
-/* import 'bootstrap/dist/css/bootstrap.css'
-import { Navbar } from 'react-bootstrap'
+import React, { useState } from 'react'
 
-export function NavBar() {
+export function NavBar(props) {
     return (
-        <Navbar bg="light">
+        <div className="navbar">  
+            <div className="navButton">
+                <div className="navi"></div>
+                <div className="navi"></div>
+                <div className="navi"></div>
+                <div className="navi"></div>
+                
+            </div>
+            <div className="dropdown-content">
+                <a href="#">My Account</a>
+                <a href="#">My Books</a>
+                <a href="#">Authors</a>
 
-        </Navbar>
-    )
-} */
+               {/*  <div>
+                    <a href="#">Let Rob search</a>
+                    <img className="img-inline" src="https://img.favpng.com/6/17/22/robotics-stock-photography-graduation-ceremony-png-favpng-dyCu490sipXb4091EXsAU0XDu.jpg"></img>
+                </div> */}
+                
+            </div>        
+        </div>       
+        )
+}

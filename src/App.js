@@ -1,6 +1,5 @@
 import './App.css';
 import { SearchBooks } from './search.jsx';
-import { NavBar } from './nav.jsx'
 
 
 function App() {
