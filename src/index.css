@@ -10,11 +10,13 @@
 
 body {
     font-family: 'Exo', sans-serif;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
+    background-color: white;
 }
 
 li {
-    background-color: rgb(0, 255, 170);
+    /* background-color: rgb(0, 255, 170); */
+    background-color: white;
 }
 
 a {
@@ -90,10 +92,9 @@ input:focus::placeholder {
     margin: 5px;    
 }
 
-
 fieldset {
     height: 125px;
-    background-image: url(/img/buch_4.png);
+    /* background-image: url(/img/buch_4.png); */
     margin: 0 25px 0 25px;
     border:3px solid red var(--color-shadow, currentColor);
     border-radius: 4px;
@@ -110,7 +111,6 @@ legend {
     margin-right: auto;
 }
 
-
 .response {
     width: 100%;
     height: auto;
@@ -118,13 +118,11 @@ legend {
     background: white !important;
 }
 
-
 .flex {
     display: flex;
     flex-direction: row;
     justify-content: center;
 } 
-
 
 li {
     list-style: none;
@@ -133,7 +131,6 @@ li {
     margin-top: 15px;
     margin-bottom: 25px;
 }
-
 
 
 /* output */
@@ -215,7 +212,6 @@ li {
     width: 250px;
 }
 
-
 .myList {
     background: rgb(179, 207, 55);
     color: black;
@@ -229,9 +225,13 @@ li {
     margin: 5px 0px 5px 5px;    
 }
 
+.box {
+    display: flex;
+    flex-direction: row;
+}
 
 .myList:hover {
-    background: rgb(26, 225, 122);
+    /* background: rgb(26, 225, 122); */
     color: black;
     border: 2px solid black;
     border-radius: 5%;
@@ -241,6 +241,19 @@ li {
     height: 25px;
     margin: 5px 0px 5px 5px;
     cursor: pointer;  
+}
+
+.list-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+}
+.list-group-item {
+    border: 1px dotted black;
+    margin: 0;
+    padding: 0;
 }
 
 label {

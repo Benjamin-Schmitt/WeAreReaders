@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { MyList } from './myList.jsx';
 
 export function SearchBooks() {   
     const [books, setBooks] = useState([]);
     const [query, setQuery] = useState('');
+    const [clickedBooks, setClickedBooks] = useState([]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -15,10 +17,13 @@ export function SearchBooks() {
             console.log(err)
             })
         }
+    
+        console.log(books)
+        console.log(clickedBooks)
 
     return (
         <div>
-            <div>
+            <div className="box">
             <h1>We Are Readers</h1>
             <form onSubmit={handleSubmit}>
                 <fieldset>
@@ -40,6 +45,8 @@ export function SearchBooks() {
                     </nav>
                 </fieldset>
             </form>
+            <MyList 
+            clickedBooks={clickedBooks}/>
             </div>
 
             <ul className="output">
@@ -49,12 +56,18 @@ export function SearchBooks() {
                     let sale = null;
                     let saleButton = null;
                     let listButton = null;
+
+                    function addBooks() {
+                        setClickedBooks(clickedBooks => [...clickedBooks, book.volumeInfo]);
+                        console.log(clickedBooks)
+                       /*  clickedBooks.push(book.volumeInfo.title) */
+                    }
                     
                     function forSale() {
                         if(book.saleInfo.buyLink) {
                             sale = book.saleInfo.buyLink;
                             return ([saleButton = <button className="saleButton"><a href={sale} className="saleLink">kaufen</a></button>,
-                            <button className="listButton">add to list</button>
+                            <button className="listButton" onClick={addBooks}>add to list</button>
                         ])
                         } 
                         else {
@@ -79,5 +92,7 @@ export function SearchBooks() {
             </ul>           
         </div>
     )
+    
 }
 export default SearchBooks
+
