@@ -15,11 +15,12 @@ export function MyList(props) {
                     return (
                         <div className="list-group-item">
                             <li  key={index}>{book.title}</li>
-                        </div>
+                        </div>                        
                     )
                 }
             )}
         </ul>
+        <a href="#"> -- My Books -- </a>
     </div>
     )
 }
