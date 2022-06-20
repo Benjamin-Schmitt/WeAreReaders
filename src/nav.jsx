@@ -7,8 +7,7 @@ export function NavBar(props) {
                 <div className="navi"></div>
                 <div className="navi"></div>
                 <div className="navi"></div>
-                <div className="navi"></div>
-                
+                <div className="navi"></div>                
             </div>
             <div className="dropdown-content">
                 <a href="#">My Account</a>

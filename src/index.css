@@ -3,6 +3,7 @@
 
 body {
     /* play around with this: https://cssgradient.io/ */
+    
     font-family: 'Exo', sans-serif;
     /* background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 22%, rgba(255,72,0,1) 100%); */
@@ -210,8 +211,6 @@ li {
     cursor: pointer;
 }
 
-
-
 .myList {
     background: rgb(179, 207, 55);
     color: black;
@@ -224,7 +223,6 @@ li {
     height: 25px;
     margin: 5px 0px 5px 5px;    
 }
-
 
 /* LAYOUT */
 .box {
@@ -282,22 +280,28 @@ label {
     width: 100%;
     background: #43464B;
 }
+
 .navi {
     width: 35px;
     background-color: white;
     height: 5px;
     margin: 5px;
 }
+
 .navButton {
-    width: 45px;
-    background-color: #43464B;
+    width: 35px;
+    /* background-color: #43464B; */
 }
-.navButton:hover {
-    width: 45px;
-    background-color: #43464B;
+.navButton:hover .navi {
+    width: 35px;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     cursor: pointer;
     color:white;
+    transform: rotate(180deg);
+    transition: 2.5s;
 }
+
 a {
     text-decoration: none;
     color: white;
