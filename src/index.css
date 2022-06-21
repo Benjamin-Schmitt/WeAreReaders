@@ -273,7 +273,15 @@ label {
 }
 
 
-
+/* starter */
+.starter {
+    margin: auto;
+    all: unset;
+    width: 250px;
+    height: 50px;
+    border: 2px solid black;
+    margin: 5%;
+}
 
 /* NAVBAR */
 .navbar {

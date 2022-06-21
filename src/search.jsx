@@ -21,7 +21,11 @@ export function SearchBooks() {
         console.log(books)
         console.log(clickedBooks)
 
-    return (
+    const resetInput = () => {
+        document.getElementsByClassName("input")[0].value = '';
+    }
+    
+        return (
         <div className="box">            
             <div className="innerbox_left">
             <h1>We Are Readers</h1>
@@ -42,7 +46,7 @@ export function SearchBooks() {
                         <br />
                         <nav className="nav">
                             <button className='submit' type="submit">Search</button>
-                            <button className='reset' type="submit">reset</button>
+                            <button className='reset' type="submit" onClick={resetInput} >reset</button>
                             <button className='myList' type="submit">my List</button>
                         </nav>
                     </fieldset>
