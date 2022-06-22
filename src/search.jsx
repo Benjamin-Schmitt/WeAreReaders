@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import axios from 'axios'
 import { MyList } from './myList.jsx';
 import { NavBar } from './nav.jsx';
@@ -7,6 +7,8 @@ export function SearchBooks() {
     const [books, setBooks] = useState([]);
     const [query, setQuery] = useState('');
     const [clickedBooks, setClickedBooks] = useState([]);
+ 
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -47,7 +49,7 @@ export function SearchBooks() {
                         <nav className="nav">
                             <button className='submit' type="submit">Search</button>
                             <button className='reset' type="submit" onClick={resetInput} >reset</button>
-                            <button className='myList' type="submit">my List</button>
+                            <button className='myList' type="submit"><a href="/reader/mylist">my List</a></button>
                         </nav>
                     </fieldset>
                 </form>          
@@ -112,13 +114,8 @@ export function SearchBooks() {
                     }
                 </ul>
             </div>
-
             <MyList clickedBooks={clickedBooks}/>
-            
-        </div>
-        
+        </div>   
     )
-    
 }
 export default SearchBooks
-

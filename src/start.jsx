@@ -5,8 +5,8 @@ export function Start() {
         <div className="start">
             <h1>We Are Readers</h1>
             <label>publish, buy, read, sell, resell</label><br />
-            <button className="starter">I am a reader</button>
-            <button className="starter">I am a publisher</button>
+            <button className="starter"><a href="/reader">I am a reader</a></button>
+            <button className="starter"> <a href="/publisher">I am a publisher</a></button>
         </div>
     )
 }
