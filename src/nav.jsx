@@ -12,13 +12,7 @@ export function NavBar(props) {
             <div className="dropdown-content">
                 <a href="#">My Account</a>
                 <a href="#">My Books</a>
-                <a href="#">Authors</a>
-
-               {/*  <div>
-                    <a href="#">Let Rob search</a>
-                    <img className="img-inline" src="https://img.favpng.com/6/17/22/robotics-stock-photography-graduation-ceremony-png-favpng-dyCu490sipXb4091EXsAU0XDu.jpg"></img>
-                </div> */}
-                
+                <a href="#">Authors</a>                       
             </div>        
         </div>       
         )
