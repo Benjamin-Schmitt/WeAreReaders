@@ -25,8 +25,8 @@ export function SearchBooks() {
             console.log(err)
             })
         }    
-        console.log(books)
-        console.log(clickedBooks)
+        /* console.log(books)
+        console.log(clickedBooks) */
 
     const resetInput = () => {
         document.getElementsByClassName("input")[0].value = '';

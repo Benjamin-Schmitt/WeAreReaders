@@ -116,6 +116,8 @@ ul {
     padding: 0; 
 }
 
+
+
 li {
     text-align: center;
     list-style: none;
@@ -125,6 +127,48 @@ li {
     margin-bottom: 25px;
 }
 
+
+
+/* My List */
+.outer-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.list-group-item {
+    text-align: left;
+    list-style: none;
+    border-bottom: 5px solid white;
+    border-left: 5px solid white;
+    margin-top: 15px;
+    padding-left: 1vw;
+    margin-bottom: 25px;
+}
+
+.list-img {
+    border: 3px solid transparent;
+}
+
+.list-img:hover {
+    border: 3px solid white;
+    height: auto;
+} 
+
+.title-and-author {
+    padding: 5vw;
+}
+
+.infoLink {
+    all: unset;
+    width: 100px;
+    text-align: center;
+    background-color: #43464B;
+}
+.infoLink:hover {
+    text-align: center;
+    background-color: #394c6b;
+    cursor: pointer;
+}
 
 /* output */
 .saleButton {
@@ -245,7 +289,17 @@ li {
     margin-left: 2.5%;
 }
 
+.stars {
+    text-align: center;
+    background-color: orange;
+    width: 100px;
+}
 
+.no-rating {
+    width: 100px;
+    text-align: center;
+    background-color: red;
+}
 
 .myList:hover {
     /* background: rgb(26, 225, 122); */
@@ -366,3 +420,4 @@ a {
     width: 45px;
     height: 45px;
 }
+
