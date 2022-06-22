@@ -2,13 +2,18 @@ import React, { useState, useContext } from 'react'
 import axios from 'axios'
 import { MyList } from './myList.jsx';
 import { NavBar } from './nav.jsx';
+import { BooksContext } from '../contexts/BooksContext.jsx';
+import { Link } from "react-router-dom";
+
+
 
 export function SearchBooks() {   
     const [books, setBooks] = useState([]);
-    const [query, setQuery] = useState('');
-    const [clickedBooks, setClickedBooks] = useState([]);
- 
+    const [query, setQuery] = useState('');    
+    
 
+   const [clickedBooks, setClickedBooks] = useState([]);
+   const { booksList, setBooksList} = React.useContext(BooksContext);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -49,7 +54,7 @@ export function SearchBooks() {
                         <nav className="nav">
                             <button className='submit' type="submit">Search</button>
                             <button className='reset' type="submit" onClick={resetInput} >reset</button>
-                            <button className='myList' type="submit"><a href="/reader/mylist">my List</a></button>
+                            <Link to="/reader/mylist">my List</Link>
                         </nav>
                     </fieldset>
                 </form>          
@@ -63,7 +68,8 @@ export function SearchBooks() {
                         let listButton = null;
 
                         function addBooks() {
-                            setClickedBooks(clickedBooks => [...clickedBooks, book.volumeInfo]);
+                            setBooksList(booksList => [...booksList, book.volumeInfo]);
+                         
                         }
                         
                         function title() {
@@ -114,7 +120,7 @@ export function SearchBooks() {
                     }
                 </ul>
             </div>
-            <MyList clickedBooks={clickedBooks}/>
+            {/* <MyList clickedBooks={clickedBooks}/> */}
         </div>   
     )
 }
