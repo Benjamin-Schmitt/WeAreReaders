@@ -13,8 +13,6 @@ import { Publisher } from './components/publish.jsx';
 import { MyList } from './components/myList.jsx';
 import { BooksContextProvider } from './contexts/BooksContext.jsx';
 
-
-
 function App(props) {
   return (
      <BooksContextProvider>
@@ -32,4 +30,3 @@ function App(props) {
   );
 }
 export default App;
-

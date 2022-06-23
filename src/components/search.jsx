@@ -1,11 +1,9 @@
-import React, { useState, useContext } from 'react'
+import { useState, useContext } from 'react'
 import axios from 'axios'
-import { MyList } from './myList.jsx';
 import { NavBar } from './nav.jsx';
 import { BooksContext } from '../contexts/BooksContext.jsx';
 import { Link } from "react-router-dom";
-
-
+import { BookCard } from './BookCard.jsx';
 
 export function SearchBooks() {   
     const [books, setBooks] = useState([]);
@@ -13,7 +11,7 @@ export function SearchBooks() {
     
 
    const [clickedBooks, setClickedBooks] = useState([]);
-   const { booksList, setBooksList} = React.useContext(BooksContext);
+   const { booksList, setBooksList} = useContext(BooksContext);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -25,13 +23,10 @@ export function SearchBooks() {
             console.log(err)
             })
         }    
-        /* console.log(books)
-        console.log(clickedBooks) */
 
     const resetInput = () => {
         document.getElementsByClassName("input")[0].value = '';
-    }
-    
+    }    
         return (
         <div className="box">            
             <div className="innerbox_left">
@@ -60,67 +55,12 @@ export function SearchBooks() {
                 </form>          
             
                 <ul className="output">
-                    {                
-                    books.map((book, index) => {
-                        let cover = book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail;
-                        let sale = null;
-                        let saleButton = null;
-                        let listButton = null;
-
-                        function addBooks() {
-                            setBooksList(booksList => [...booksList, book.volumeInfo]);
-                         
-                        }
-                        
-                        function title() {
-                            if (book.volumeInfo.title) {
-                                return book.volumeInfo.title
-                            } else {
-                                return "No Title available"
-                            }
-                        }
-
-                        function author() {
-                            if (book.volumeInfo.authors) {
-                                return book.volumeInfo.authors
-                            } else {
-                                return "No Author available"
-                            }
-                        }
-
-                        function forSale() {
-                            if(book.saleInfo.buyLink) {
-                                sale = book.saleInfo.buyLink;
-                                return ([saleButton = <button className="saleButton"><a href={sale} className="saleLink">kaufen</a></button>,
-                                <button className="listButton" onClick={addBooks}>add to list</button>
-                            ])
-                            } 
-                            else {
-                                sale = book.saleInfo.saleability;
-                                return (
-                                    <button className="notAv">
-                                        nicht erhältlich
-                                    </button>
-                                    )
-                            }
-                        }
-                        
-                        if(cover!=undefined) {
-                        return (                        
-                                <li key={index}>                         
-                                        {title()} <br />
-                                        by <br />   
-                                        {author()} <br />  
-                                        <img src={cover} alt=""/> <br />
-                                        {forSale()}
-                                </li>
-                            )
-                        }
-                        })
-                    }
+                    { books.map((book, index) => {    
+                        console.log(book)           
+                        return <BookCard book={book} index={index} />
+                    }) }
                 </ul>
             </div>
-            {/* <MyList clickedBooks={clickedBooks}/> */}
         </div>   
     )
 }
