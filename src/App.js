@@ -1,19 +1,17 @@
 import './App.css';
 import React from 'react'
-import { useState } from "react";
-import { SearchBooks } from './components/search.jsx';
+import { SearchBooks } from './components/Search.jsx';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
-import { Start } from './components/start';
-import { Publisher } from './components/publish.jsx';
-import { MyList } from './components/myList.jsx';
+import { Start } from './components/Start';
+import { Publisher } from './components/Publish.jsx';
+import { MyList } from './components/MyList.jsx';
 import { BooksContextProvider } from './contexts/BooksContext.jsx';
 
-function App(props) {
+function App() {
   return (
      <BooksContextProvider>
         <Router> 
