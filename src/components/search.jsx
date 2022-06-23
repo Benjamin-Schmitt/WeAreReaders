@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react'
 import axios from 'axios'
-import { NavBar } from './nav.jsx';
+import { NavBar } from './Navbar.jsx';
 import { BooksContext } from '../contexts/BooksContext.jsx';
 import { Link } from "react-router-dom";
 import { BookCard } from './BookCard.jsx';
