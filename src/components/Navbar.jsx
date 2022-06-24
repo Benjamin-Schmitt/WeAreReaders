@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-
-export function NavBar(props) {
+import { Link } from "react-router-dom";
+export function NavBar() {
     return (
         <div className="navbar">  
             <div className="navButton">
@@ -11,7 +10,7 @@ export function NavBar(props) {
             </div>
             <div className="dropdown-content">
                 <a href="#">My Account</a>
-                <a href="#">My Books</a>
+                <Link to="/reader/mylist">Book List</Link>
                 <a href="#">Authors</a>                       
             </div>        
         </div>       
