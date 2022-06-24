@@ -14,22 +14,22 @@ a {
 
 
 /**** /starter ****/
+.start {
+    color: white; 
+}
 .starter {
-    background-color:#43464B  !important;
-    color: white;
+    background-color: rgb(17, 222, 17) !important;
     margin: auto;
     all: unset;
     width: 250px;
     height: 50px;
-    border: none;
     border: 2px solid black;
     margin: 5%;
+    font-weight: bold;
+    text-align: center; 
 }
 .starter:hover {
-    background-color: #43464B !important;
-    color: white;
-    font-weight: bold;
-    text-align: center;    
+    background-color: rgb(140, 0, 255) !important;       
 }
 
 
