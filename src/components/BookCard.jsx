@@ -4,23 +4,20 @@ import { BooksContext } from '../contexts/BooksContext.jsx';
 export const BookCard = (props) => {
     const { booksList, setBooksList} = useContext(BooksContext);
     let cover = props.book.volumeInfo.imageLinks && props.book.volumeInfo.imageLinks.smallThumbnail;
-    let sale = null;
     let saleButton = null;
-    let listButton = null;
+  
         
     function addBooks() {
         setBooksList(booksList => [...booksList, props.book.volumeInfo]);                         
     }    
     
-    function forSale() {
+    const forSale = () => {
         if(props.book.saleInfo.buyLink) {
-            sale = props.book.saleInfo.buyLink;
-            return ([saleButton = <button key={props.index} className="saleButton"><a href={sale} className="saleLink">kaufen</a></button>,
+            return ([saleButton = <button key={props.index} className="saleButton"><a href={props.book.saleInfo.buyLink} className="saleLink">kaufen</a></button>,
             <button key={props.index+1} className="listButton" onClick={addBooks}>add to list</button>
         ])
         } 
         else {
-            sale = props.book.saleInfo.saleability;
             return (
                 <button className="notAv" key={props.index}>
                     nicht erhältlich
