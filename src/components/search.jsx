@@ -44,7 +44,7 @@ export function SearchBooks() {
                         <nav className="nav">
                             <button className='submit' type="submit">Search</button>
                             <button className='reset' type="submit" onClick={resetInput} >reset</button>
-                            <Link to="/reader/mylist">my List</Link>
+                            <button className='my-list'><Link to="/reader/mylist">my List</Link></button>
                         </nav>
                     </fieldset>
                 </form>          

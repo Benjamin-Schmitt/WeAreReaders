@@ -9,7 +9,7 @@ body {
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 
@@ -221,8 +221,12 @@ li {
     cursor: not-allowed;
 }
 
-.myList {
-    background: rgb(179, 207, 55); 
+.my-list {
+    background-color: rgb(29, 220, 29);
+}
+
+.my-list:hover {
+    border: 2px solid black;
 }
 
 
