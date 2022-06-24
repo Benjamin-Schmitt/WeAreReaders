@@ -9,9 +9,7 @@ export function NavBar() {
                 <div className="navi"></div>                
             </div>
             <div className="dropdown-content">
-                <a href="#">My Account</a>
-                <Link to="/reader/mylist">Book List</Link>
-                <a href="#">Authors</a>                       
+                <Link to="/reader/mylist">Book List</Link>                 
             </div>        
         </div>       
         )

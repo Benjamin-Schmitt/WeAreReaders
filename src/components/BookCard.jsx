@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { BooksContext } from '../contexts/BooksContext.jsx';
 
 export const BookCard = (props) => {
-    const { booksList, setBooksList} = useContext(BooksContext);
+    const { setBooksList} = useContext(BooksContext);
     let cover = props.book.volumeInfo.imageLinks && props.book.volumeInfo.imageLinks.smallThumbnail;
     let saleButton = null;
   

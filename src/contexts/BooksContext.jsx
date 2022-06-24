@@ -1,7 +1,6 @@
 import { createContext, useState } from 'react';
 
 const BooksContext = createContext();
-console.log(BooksContext);
 
 function BooksContextProvider(props) {
   const [booksList, setBooksList] = useState([]);
