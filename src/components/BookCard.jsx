@@ -4,7 +4,6 @@ import { BooksContext } from '../contexts/BooksContext.jsx';
 export const BookCard = (props) => {
     const { setBooksList} = useContext(BooksContext);
     let cover = props.book.volumeInfo.imageLinks && props.book.volumeInfo.imageLinks.smallThumbnail;
-    let saleButton = null;
   
         
     function addBooks() {
@@ -13,9 +12,15 @@ export const BookCard = (props) => {
     
     const forSale = () => {
         if(props.book.saleInfo.buyLink) {
-            return ([saleButton = <button key={props.index} className="saleButton"><a href={props.book.saleInfo.buyLink} className="saleLink">kaufen</a></button>,
-            <button key={props.index+1} className="listButton" onClick={addBooks}>add to list</button>
-        ])
+            return [
+                <button key={props.index} className="saleButton">
+                    <a href={props.book.saleInfo.buyLink} className="saleLink">kaufen</a>
+                </button>,
+                
+                <button key={props.index+1} className="listButton" onClick={addBooks}>
+                    add to list
+                </button>
+             ]
         } 
         else {
             return (
@@ -27,11 +32,12 @@ export const BookCard = (props) => {
     }
 
     if(cover!=undefined) {
+        console.log(props.book)
         return (        
-            <li key={props.index}>
-                {((props.book.volumeInfo.title) ? props.book.volumeInfo.title+" von " : "No title available")}
+            <li key={props.index} alt="a list with all books, found by the search">
+                {((props.book.volumeInfo.title) ? (props.book.volumeInfo.title+" von ") : "No title available")}
                 {((props.book.volumeInfo.authors) ? props.book.volumeInfo.authors : "No Author available")}              
-                <div>{cover!=undefined && <img key={props.index} src={cover} alt=""/>}</div>
+                <div>{cover!=undefined && <img key={props.index} src={cover} alt="an image of the book" />}</div>
                 <div>{forSale()}</div>
             </li>           
         )

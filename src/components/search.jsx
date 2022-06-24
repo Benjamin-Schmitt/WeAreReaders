@@ -50,7 +50,8 @@ export function SearchBooks() {
                 </form>          
             
                 <ul className="output">
-                    { books.map((book, index) => {          
+                    { 
+                    books.map((book, index) => {          
                         return <BookCard book={book} index={index} key={index} />
                     }) 
                     }

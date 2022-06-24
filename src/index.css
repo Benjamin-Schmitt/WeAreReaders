@@ -1,4 +1,4 @@
-/* BACKGROUND */
+/* GENERAL STUFF */
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 body {
     /* play around with this: https://cssgradient.io/ */
@@ -16,6 +16,7 @@ a {
 /**** /starter ****/
 .starter {
     background-color:#43464B  !important;
+    color: white;
     margin: auto;
     all: unset;
     width: 250px;
@@ -30,6 +31,7 @@ a {
     font-weight: bold;
     text-align: center;    
 }
+
 
 
 /* /publisher */
