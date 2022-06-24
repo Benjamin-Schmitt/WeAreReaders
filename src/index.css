@@ -1,4 +1,4 @@
-/* BACKGROUND */
+/* GENERAL STUFF */
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 body {
     /* play around with this: https://cssgradient.io/ */
@@ -14,22 +14,24 @@ a {
 
 
 /**** /starter ****/
+.start {
+    color: white; 
+}
 .starter {
-    background-color:#43464B  !important;
+    background-color: rgb(17, 222, 17) !important;
     margin: auto;
     all: unset;
     width: 250px;
     height: 50px;
-    border: none;
     border: 2px solid black;
     margin: 5%;
+    font-weight: bold;
+    text-align: center; 
 }
 .starter:hover {
-    background-color: #43464B !important;
-    color: white;
-    font-weight: bold;
-    text-align: center;    
+    background-color: rgb(140, 0, 255) !important;       
 }
+
 
 
 /* /publisher */
@@ -45,6 +47,16 @@ a {
     background-color: #43464B !important;
     margin: auto;
     border: 0.5px solid white;
+}
+
+/* /reader */
+/* GENERAL */
+.box {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
 }
 
 
@@ -71,7 +83,7 @@ a {
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     color:white;
     transform: rotate(180deg);
-    transition: 2.5s;
+    transition: 1.5s;
 }
 
 .dropdown-content {
@@ -236,14 +248,6 @@ li {
 /* LIST */
 .outer-box {
     display: flex;
-    flex-direction: row;
-}
-.box {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: space-between;
 }
 
 .innerbox_left {
@@ -295,11 +299,11 @@ li {
     all: unset;
     width: 100px;
     text-align: center;
-    background-color: #43464B;
+    background-color: white;
 }
 .infoLink:hover {
     text-align: center;
-    background-color: #394c6b;
+    background-color: rgb(22, 206, 22);
 }
 
 .stars {
