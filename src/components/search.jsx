@@ -1,17 +1,13 @@
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 import { NavBar } from './Navbar.jsx';
-import { BooksContext } from '../contexts/BooksContext.jsx';
 import { Link } from "react-router-dom";
 import { BookCard } from './BookCard.jsx';
 
 export function SearchBooks() {   
     const [books, setBooks] = useState([]);
     const [query, setQuery] = useState('');    
-    
 
-   const [clickedBooks, setClickedBooks] = useState([]);
-   const { booksList, setBooksList} = useContext(BooksContext);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -32,20 +28,19 @@ export function SearchBooks() {
             <div className="innerbox_left">
             <h1>We Are Readers</h1>
             <NavBar />          
-                <form onSubmit={handleSubmit}>
-                    
+                <form onSubmit={handleSubmit}>                    
                     <fieldset>   
-                    <legend>Search For Books</legend>
-                        <input
-                        onChange={e => {setQuery(e.target.value)}}
-                        className="input" 
-                        type="text" 
-                        name="books" 
-                        id="books" 
-                        placeholder="search for books"   
-                        required        
-                        />
-                        <br />
+                        <legend>Search For Books</legend>
+                            <input
+                            onChange={e => {setQuery(e.target.value)}}
+                            className="input" 
+                            type="text" 
+                            name="books" 
+                            id="books" 
+                            placeholder="search for books"   
+                            required        
+                            />
+
                         <nav className="nav">
                             <button className='submit' type="submit">Search</button>
                             <button className='reset' type="submit" onClick={resetInput} >reset</button>
@@ -55,13 +50,12 @@ export function SearchBooks() {
                 </form>          
             
                 <ul className="output">
-                    { books.map((book, index) => {    
-                        console.log(book)           
-                        return <BookCard book={book} index={index} />
-                    }) }
+                    { books.map((book, index) => {          
+                        return <BookCard book={book} index={index} key={index} />
+                    }) 
+                    }
                 </ul>
             </div>
         </div>   
-    )
+        )
 }
-export default SearchBooks
