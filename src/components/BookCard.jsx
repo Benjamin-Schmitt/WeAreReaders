@@ -4,10 +4,9 @@ import { BooksContext } from '../contexts/BooksContext.jsx';
 export const BookCard = (props) => {
     const { setBooksList} = useContext(BooksContext);
     let cover = props.book.volumeInfo.imageLinks && props.book.volumeInfo.imageLinks.smallThumbnail;
-  
-        
-    function addBooks() {
-        setBooksList(booksList => [...booksList, props.book.volumeInfo]);                         
+     
+    const addBooks = () => {
+        setBooksList(booksList => [...booksList, props.book.volumeInfo]);                    
     }    
     
     const forSale = () => {
@@ -31,13 +30,12 @@ export const BookCard = (props) => {
         }
     }
 
-    if(cover!=undefined) {
-        console.log(props.book)
+    if(cover!==undefined) {
         return (        
             <li key={props.index} alt="a list with all books, found by the search">
                 {((props.book.volumeInfo.title) ? (props.book.volumeInfo.title+" von ") : "No title available")}
                 {((props.book.volumeInfo.authors) ? props.book.volumeInfo.authors : "No Author available")}              
-                <div>{cover!=undefined && <img key={props.index} src={cover} alt="an image of the book" />}</div>
+                <div>{cover!==undefined && <img key={props.index} src={cover} alt="book cover" />}</div>
                 <div>{forSale()}</div>
             </li>           
         )

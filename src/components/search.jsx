@@ -52,7 +52,9 @@ export function SearchBooks() {
                 <ul className="output">
                     { 
                     books.map((book, index) => {          
-                        return <BookCard book={book} index={index} key={index} />
+                        return (
+                        <BookCard book={book} index={index} key={index} />
+                        )
                     }) 
                     }
                 </ul>
