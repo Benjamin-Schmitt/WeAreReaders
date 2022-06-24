@@ -37,8 +37,9 @@ export function MyList() {
                                 </div>
 
                                 <div className="title-and-author" key={index}>                       
-                                    {book.title} <br /> by &nbsp;{book.authors} <br /> <br />
-                                    {book.description} <br />
+                                    <div className="card-content">{book.title}</div> 
+                                    <div className="card-content">{book.authors}</div> 
+                                    <div className="card-content-description">{book.description}</div>
                                 </div>
                         </div>                        
                     )
