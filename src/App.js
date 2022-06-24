@@ -1,32 +1,30 @@
 import './App.css';
 import React from 'react'
-import { useState } from "react";
-import { SearchBooks } from './search.jsx';
+import { SearchBooks } from './components/Search.jsx';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
-import { Start } from './start';
-import { Publisher } from './publish.jsx';
-import { MyList } from './myList.jsx';
+import { Start } from './components/Start';
+import { Publisher } from './components/Publish.jsx';
+import { MyList } from './components/MyList.jsx';
+import { BooksContextProvider } from './contexts/BooksContext.jsx';
 
-
-
-function App(props) {
+function App() {
   return (
-    <Router> 
-      <div className="App">  
-        <Routes>
-          <Route path="*" element={<Start />} />
-          <Route path="/publisher" element={<Publisher />} />
-          <Route path="/reader" element={<SearchBooks />} />
-          <Route path="/reader/mylist" element={<MyList />} />
-        </Routes>
-      </div>
-    </Router>
+     <BooksContextProvider>
+        <Router> 
+          <div className="App">  
+            <Routes>
+              <Route path="*" element={<Start />} />
+              <Route path="/publisher" element={<Publisher />} />
+              <Route path="/reader" element={<SearchBooks />} />
+              <Route path="/reader/mylist" element={<MyList />} />
+            </Routes>
+          </div>
+        </Router>
+     </BooksContextProvider>
   );
 }
 export default App;
-

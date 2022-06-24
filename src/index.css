@@ -1,279 +1,19 @@
-/* bg stuff */
+/* BACKGROUND */
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
-
 body {
     /* play around with this: https://cssgradient.io/ */
-    
     font-family: 'Exo', sans-serif;
-    /* background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 22%, rgba(255,72,0,1) 100%); */
-
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 
 a {
     text-decoration: none;
-}
-
-/*** input ***/
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:black;
-    background: white;
-}
-.input {
-    border-style: none;
-    border: 2px solid black;
-    color: black;    
-    background: white;
-    min-width: 250px;
-    height: auto;
-    text-align: center;
-    font-size: larger;
-    caret-color: black;
-}
-input:focus::placeholder {
-    color: transparent;
-}
-
-
-.submit {
-    border: none;
-    border-radius: 5%;    
-    background: orange;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: center;    
-    min-width: 60px;
-    height: 25px;
-    margin: 5px 5px 5px 0px;   
-}
-
-.submit:hover {
-    border: 2px solid black;
-    border-radius: 5%;    
-    background: orange;
-    font-weight: bold;
-    text-align: center;    
-    min-width: 60px;
-    height: 25px;
-    margin: 5px 5px 5px 0;
-    cursor: pointer;    
-}
-
-.reset {
-    border: none;
-    border-radius: 5%;
-    background: white;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: center;    
-    min-width: 60px;
-    height: 25px;
-    margin: 5px;
-    cursor: pointer;   
-}
-
-.reset:hover {
-    border: 2px solid black;
-    border-radius: 5%;    
-    background: white;
-    font-weight: bold;
-    text-align: center;    
-    min-width: 60px;
-    height: 25px;
-    margin: 5px;    
-}
-
-fieldset {
-    height: 125px;
-    /* background-image: url(/img/buch_4.png); */
-    margin: 0 25px 0 25px;
-    /* border:3px solid red var(--color-shadow, currentColor); */
-    border-radius: 4px;
-    border: 3px solid var(--color-shadow, currentColor);
-    /* box-shadow: .5rem .5rem 0 orange; */
-    margin-bottom: 20px;
-}
-
-legend {
     color: black;
-    font-size: 175%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.response {
-    width: 100%;
-    height: auto;
-    color: black;
-    background: white !important;
-}
-
-ul {
-    margin: 0;
-    padding: 0; 
-}
-
-li {
-    text-align: center;
-    list-style: none;
-    border-bottom: 5px solid black;
-    border-left: 5px solid black;
-    margin-top: 15px;
-    margin-bottom: 25px;
 }
 
 
-/* output */
-.saleButton {
-    background: orange;
-    color: black;
-    border: none;
-    border-radius: 5%;
-    font-weight: bold;
-    text-align: center;    
-    min-width: 60px;
-    height: 25px;
-    margin: 5px; 
-    padding: 0;
-}
-.saleButton:hover {
-    background: orange;
-    color: black;
-    border: 2px solid black;
-    border-radius: 5%;
-    font-weight: bold;
-    text-align: center;    
-    min-width: 60px;
-    height: 25px;
-    margin: 5px; 
-    padding: 0;
-}
-.saleLink {
-    margin: 5px;
-    color: black;
-    text-decoration: none;
-    padding: 0;
-}
-.saleLink:hover {
-    margin: 5px;
-    color: black;
-    text-decoration: none;
-    padding: 0;
-}
-
-.output {
-    display: flex;
-    flex-direction: column; /* row looks good too */
-    justify-content: center;
-    width: 250px;
-    margin-right: 2.5%;
-}
-
-.notAv {
-    background: red;
-    color: black;
-    border: none;
-    border-radius: 5%;
-    font-weight: bold;
-    text-align: center;    
-    min-width: 75px;
-    height: 25px;
-    margin: 5px;
-    padding: 0;;
-}
-
-.listButton {
-    background: gray;
-    color: black;
-    border: none;
-    border-radius: 5%;
-    font-weight: bold;
-    text-align: center;    
-    min-width: 75px;
-    height: 25px;
-    margin: 5px;
-    padding: 0;
-}
-.listButton:hover {
-    background: white;
-    border: solid 2px black;
-    color: black;
-    border-radius: 5%;
-    font-weight: bold;
-    text-align: center;    
-    min-width: 75px;
-    height: 25px;
-    margin: 5px; 
-    padding: 0;
-    cursor: pointer;
-}
-
-.myList {
-    background: rgb(179, 207, 55);
-    color: black;
-    border: none;
-    border-radius: 5%;
-    font-weight: bold;
-    font-size: 15px;
-    text-align: center;    
-    min-width: 75px;
-    height: 25px;
-    margin: 5px 0px 5px 5px;    
-}
-
-/* LAYOUT */
-.box {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: space-between;
-}
-
-.innerbox_left {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;  
-    margin-right: 2.5%;
-}
-
-.innerbox_right {
-    margin-left: 2.5%;
-}
-
-
-
-.myList:hover {
-    /* background: rgb(26, 225, 122); */
-    color: black;
-    border: 2px solid black;
-    border-radius: 5%;
-    font-weight: bold;
-    text-align: center;    
-    min-width: 75px;
-    height: 25px;
-    margin: 5px 0px 5px 5px;
-    cursor: pointer;  
-}
-
-
-label {
-    font-size: 25px;
-    font-weight: bold;
-}
-.theList {
-    margin-top: 50px;
-    max-width: 942px;
-    height: 417px;
-    /* background-image: url(/img/uc.png); */
-}
-
-
-/* starter */
+/**** /starter ****/
 .starter {
     background-color:#43464B  !important;
     margin: auto;
@@ -289,11 +29,10 @@ label {
     color: white;
     font-weight: bold;
     text-align: center;    
-    cursor: pointer;
 }
 
 
-/* Publisher */
+/* /publisher */
 .prices {
     display: flex;
     flex-direction: row;
@@ -309,7 +48,7 @@ label {
 }
 
 
-
+/* /reader */
 /* NAVBAR */
 .navbar {
     width: 100%;
@@ -325,22 +64,16 @@ label {
 
 .navButton {
     width: 35px;
-    /* background-color: #43464B; */
 }
 .navButton:hover .navi {
     width: 35px;
     background: rgb(63,94,251);
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-    cursor: pointer;
     color:white;
     transform: rotate(180deg);
     transition: 2.5s;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
 .dropdown-content {
     display: none;
     position: absolute;
@@ -361,8 +94,222 @@ a {
     text-decoration: none;
     display: block;
 }
-.img-inline {
-    background-color: #ddd;
-    width: 45px;
-    height: 45px;
+
+
+/* /reader */
+/* INPUT */
+fieldset {
+    height: 125px;
+    margin: 0 25px 0 25px;
+    border-radius: 4px;
+    border: 3px solid var(--color-shadow, currentColor);
+    margin-bottom: 20px;
+}
+
+legend {
+    color: black;
+    font-size: 175%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:black;
+    background: white;
+}
+.input {
+    border-style: none;
+    border: 2px solid black;
+    color: black;    
+    background: white;
+    min-width: 250px;
+    height: auto;
+    text-align: center;
+    font-size: larger;
+    caret-color: black;
+}
+input:focus::placeholder {
+    color: transparent;
+}
+
+/* /reader */
+/* BUTTONS */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5%; 
+    font-weight: bold; 
+    text-align: center;  
+    font-size: 15px;  
+    min-width: 60px;
+    height: 25px;
+    margin: 5px 5px 5px 0px; 
+    border: 2px solid transparent; 
+    color: black;
+}
+
+.submit {      
+    background: orange;       
+}
+.submit:hover {
+    border: 2px solid black;  
+}
+
+.reset {
+    background: white;
+}
+.reset:hover {
+    border: 2px solid black;    
+}
+
+/* /reader */
+/* OUTPUT */
+.output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    margin-right: 2.5%;
+}
+
+ul {
+    margin: 0;
+    padding: 0; 
+}
+
+li {
+    text-align: center;
+    list-style: none;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.saleButton {
+    background: orange; 
+}
+.saleButton:hover {
+    border: 2px solid black;
+}
+
+.saleLink {
+    margin: 5px;
+    color: black;
+    text-decoration: none;
+    padding: 0;
+}
+.saleLink:hover {
+    margin: 5px;
+    color: black;
+    text-decoration: none;
+    padding: 0;
+}
+
+.listButton {
+    background: gray;
+}
+.listButton:hover {
+    border: solid 2px black;
+}
+
+.notAv {
+    background: red;
+}
+.notAv:hover {
+    cursor: not-allowed;
+}
+
+.my-list {
+    background-color: rgb(29, 220, 29);
+}
+
+.my-list:hover {
+    border: 2px solid black;
+}
+
+
+
+
+/* /reader/mylist */
+/* LIST */
+.outer-box {
+    display: flex;
+    flex-direction: row;
+}
+.box {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.innerbox_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;  
+    margin-right: 2.5%;
+}
+
+.innerbox_right {
+    margin-left: 2.5%;
+}
+.list-group-item {
+    text-align: left;
+    list-style: none;
+    border-bottom: 5px solid white;
+    border-left: 5px solid white;
+    margin-top: 15px;
+    padding-left: 1vw;
+    margin-bottom: 25px;
+}
+
+.list-img {
+    border: 3px solid transparent;
+}
+
+.list-img:hover {
+    border: 3px solid white;
+    height: auto;
+}
+
+.title-and-author {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+}
+
+.card-content {
+    padding-bottom: 5px;
+}
+
+.card-content-description {
+    padding-bottom: 5px;
+    border-top: 1px solid black;
+}
+
+.infoLink {
+    all: unset;
+    width: 100px;
+    text-align: center;
+    background-color: #43464B;
+}
+.infoLink:hover {
+    text-align: center;
+    background-color: #394c6b;
+}
+
+.stars {
+    text-align: center;
+    background-color: orange;
+    width: 100px;
+}
+
+.no-rating {
+    width: 100px;
+    text-align: center;
+    background-color: red;
 }
