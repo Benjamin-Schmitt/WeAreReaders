@@ -153,9 +153,9 @@ button {
     border-radius: 5%; 
     font-weight: bold; 
     text-align: center;  
-    font-size: 15px;  
-    min-width: 60px;
-    height: 25px;
+    font-size: 20px;  
+    min-width: 65px;
+    height: 32px;
     margin: 5px 5px 5px 0px; 
     border: 2px solid transparent; 
     color: black;
@@ -248,6 +248,13 @@ li {
 /* LIST */
 .outer-box {
     display: flex;
+    text-align: left;
+    list-style: none;
+    border-bottom: 5px solid white;
+    border-left: 5px solid white;
+    margin-top: 15px;
+    padding-left: 1vw;
+    margin-bottom: 25px;
 }
 
 .innerbox_left {
@@ -256,16 +263,6 @@ li {
     justify-content: flex-start; 
     align-items: center;  
     margin-right: 2.5%;
-}
-
-.list-group-item {
-    text-align: left;
-    list-style: none;
-    border-bottom: 5px solid white;
-    border-left: 5px solid white;
-    margin-top: 15px;
-    padding-left: 1vw;
-    margin-bottom: 25px;
 }
 
 .list-img {
@@ -280,7 +277,7 @@ li {
 .title-and-author {
     display: flex;
     flex-direction: column;
-    padding: 5vw;
+    padding: 2vw;
 }
 
 .card-content {
@@ -297,6 +294,7 @@ li {
     width: 100px;
     text-align: center;
     background-color: white;
+    margin-left: 2.5%;
 }
 .infoLink:hover {
     text-align: center;
@@ -307,10 +305,23 @@ li {
     text-align: center;
     background-color: orange;
     width: 100px;
+    margin-left: 2.5%;
 }
 
 .no-rating {
     width: 100px;
     text-align: center;
     background-color: red;
+}
+
+.remove {
+    all: unset;
+    background-color: rgb(231, 19, 19);
+    width: 100px;
+    text-align: center;
+    margin-left: 2.5%;
+}
+
+.remove:hover {
+    cursor: pointer;
 }

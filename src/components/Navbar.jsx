@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 export function NavBar() {
     return (
-        <div className="navbar">  
+        <nav className="navbar">  
             <div className="navButton">
                 <div className="navi"></div>
                 <div className="navi"></div>
@@ -11,6 +11,6 @@ export function NavBar() {
             <div className="dropdown-content">
                 <Link to="/reader/mylist">Book List</Link>                 
             </div>        
-        </div>       
+        </nav>       
         )
 }

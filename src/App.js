@@ -1,5 +1,4 @@
 import './App.css';
-import React from 'react'
 import { SearchBooks } from './components/Search.jsx';
 import {
   BrowserRouter as Router,
