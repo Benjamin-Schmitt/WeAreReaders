@@ -19,7 +19,7 @@ export function MyList() {
 
                 return (
                     <div className="outer-box" id={book.myUniqueId} key={index}>                   
-                            <div>
+                            <div className="left-box">
                                 <img className="list-img" src={book.imageLinks.thumbnail} alt={book.title} />
                                 <Rating book={book} i={index} />
                                 <button className="infoLink"><a href={book.infoLink}>Infos</a></button>
