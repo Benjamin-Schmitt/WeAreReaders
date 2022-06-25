@@ -9,7 +9,7 @@ import { Start } from './components/Start';
 import { Publisher } from './components/Publish.jsx';
 import { MyList } from './components/MyList.jsx';
 import { BooksContextProvider } from './contexts/BooksContext.jsx';
-
+import { Test } from './components/Test.jsx';
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
               <Route path="/publisher" element={<Publisher />} />
               <Route path="/reader" element={<SearchBooks />} />
               <Route path="/reader/mylist" element={<MyList />} />
+              <Route path="/test" element={<Test />} />
             </Routes>
           </div>
         </Router>

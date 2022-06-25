@@ -1,12 +1,16 @@
 import { useContext } from 'react';
 import { BooksContext } from '../contexts/BooksContext.jsx';
+import uniqid from 'uniqid';
 
 export const BookCard = (props) => {
-    const { setBooksList} = useContext(BooksContext);
-    let cover = props.book.volumeInfo.imageLinks && props.book.volumeInfo.imageLinks.smallThumbnail;
+    const { booksList, setBooksList } = useContext(BooksContext);    
      
     const addBooks = () => {
-        setBooksList(booksList => [...booksList, props.book.volumeInfo]);                    
+        //giving it a uniqe id
+        props.book.volumeInfo.myUniqueId = uniqid();
+        //"feeding" BooksContext
+        setBooksList(booksInList => [...booksInList, props.book.volumeInfo]);
+        console.log(booksList)
     }    
     
     const forSale = () => {
@@ -30,6 +34,7 @@ export const BookCard = (props) => {
         }
     }
 
+    let cover = props.book.volumeInfo.imageLinks && props.book.volumeInfo.imageLinks.smallThumbnail;
     if(cover!==undefined) {
         return (        
             <li key={props.index} alt="a list with all books, found by the search">
