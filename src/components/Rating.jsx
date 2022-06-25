@@ -8,7 +8,7 @@ export function Rating(props) {
         } else {
             return (
                 <div key={props.i} className="stars">
-                    no rating available
+                    no rating
                 </div>
                 )
             }

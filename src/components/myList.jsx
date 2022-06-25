@@ -19,7 +19,6 @@ export function MyList() {
 
                     
                     const deleteBook = () => {
-                    console.log(id)
                     document.getElementById(id).remove();
                     booksList.splice(id, 1);
                     }
@@ -31,6 +30,7 @@ export function MyList() {
                                 <Rating book={book} i={index} />
                                 <button className="infoLink"><a href={book.infoLink}>Infos</a></button>
                                 <button className="remove" onClick={deleteBook}>remove</button>
+                                <div className="id-checker">Id: {id}</div>
                             </div>
 
                             <div className="title-and-author" key={index}>                       

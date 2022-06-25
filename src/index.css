@@ -242,8 +242,6 @@ li {
 }
 
 
-
-
 /* /reader/mylist */
 /* LIST */
 .outer-box {
@@ -316,7 +314,7 @@ li {
 
 .remove {
     all: unset;
-    background-color: rgb(231, 19, 19);
+    background-color: rgb(209, 105, 105);
     width: 100px;
     text-align: center;
     margin-left: 2.5%;
@@ -324,4 +322,11 @@ li {
 
 .remove:hover {
     cursor: pointer;
+}
+
+.id-checker {
+    width: 100px;
+    margin-left: 2.5%;
+    background-color: rgb(49, 246, 190);
+    text-align: center;
 }
