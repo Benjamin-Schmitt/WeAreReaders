@@ -4,6 +4,7 @@ import { NavBar } from './Navbar.jsx';
 import { Link } from "react-router-dom";
 import { BookCard } from './BookCard.jsx';
 
+
 export function SearchBooks() {   
     const [books, setBooks] = useState([]);
     const [query, setQuery] = useState('');    
@@ -45,6 +46,7 @@ export function SearchBooks() {
                             <button className='submit' type="submit">Search</button>
                             <button className='reset' type="submit" onClick={resetInput} >reset</button>
                             <button className='my-list'><Link to="/reader/mylist">my List</Link></button>
+                            <button className='testing'><Link to="/test">TESTZONE</Link></button>
                         </nav>
                     </fieldset>
                 </form>          
