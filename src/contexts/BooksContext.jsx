@@ -3,8 +3,7 @@ import { createContext, useState } from 'react';
 const BooksContext = createContext();
 
 function BooksContextProvider(props) {
-  const [booksList, setBooksList] = useState([]);
-  console.log(booksList)  
+  const [booksList, setBooksList] = useState([]); 
     return (
         <BooksContext.Provider value={{booksList, setBooksList}}>
          {/*wrapping all components from App.js */}

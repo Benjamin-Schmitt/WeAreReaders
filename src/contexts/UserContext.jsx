@@ -3,16 +3,26 @@ import { createContext, useState } from 'react';
 const UserContext = createContext();
 
 function UserContextProvider(props) {
-  const [User, setUser] = useState({
+  const [User, setUser] = useState([
+    {
         name : "Ben",
-        email : "email@gmail.com",
+        email : "ben@mail.com",
+        password : "123",
+        id : 0,
+        img : 'UserOne.png',
+        data: [],
+    },
+    {
+        name : "John",
+        email : "john@mail.com",
         password : "123",
         id : 1,
-        img : 'UserOne.png',
-  }); 
+        img : 'UserTwo.png',
+        data: [],
+    },
+]); 
     return (
         <UserContext.Provider value={{User, setUser}}>
-         {/*wrapping all components from App.js */}
          {props.children}
         </UserContext.Provider>
       );

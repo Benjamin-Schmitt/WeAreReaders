@@ -20,7 +20,11 @@ export const BookCard = (props) => {
                     <a href={props.book.saleInfo.buyLink} className="saleLink">kaufen</a>
                 </button>,
                 
-                <button key={props.index+1} className="listButton" onClick={addBooks}>
+                <button 
+                key={props.index+1} 
+                className="listButton" 
+                onClick={addBooks}
+                >
                     add to list
                 </button>
              ]
