@@ -38,7 +38,7 @@ export const BookCard = (props) => {
     if(cover!==undefined) {
         return (        
             <li key={props.index} alt="a list with all books, found by the search">
-                {((props.book.volumeInfo.title) ? (props.book.volumeInfo.title+" von ") : "No title available")}
+                {((props.book.volumeInfo.title) ? (<div className="title">{props.book.volumeInfo.title} <br /> von </div>) : "No title available")}
                 {((props.book.volumeInfo.authors) ? props.book.volumeInfo.authors : "No Author available")}              
                 <div>{cover!==undefined && <img key={props.index} src={cover} alt="book cover" />}</div>
                 <div>{forSale()}</div>

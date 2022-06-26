@@ -33,7 +33,6 @@ a {
 }
 
 
-
 /* /publisher */
 .prices {
     display: flex;
@@ -149,30 +148,44 @@ input:focus::placeholder {
 /* BUTTONS */
 button {
     cursor: pointer;
-    border: none;
-    border-radius: 5%; 
-    font-weight: bold; 
-    text-align: center;  
-    font-size: 20px;  
-    min-width: 65px;
-    height: 32px;
-    margin: 5px 5px 5px 0px; 
-    border: 2px solid transparent; 
-    color: black;
+    margin: 10px;
+    padding: 5px 5px; 
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px; 
+    border: 1.5px solid black; 
 }
 
 .submit {      
-    background: orange;       
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
 }
 .submit:hover {
-    border: 2px solid black;  
+    background-position: right center;
+    color: #fff;
+    text-decoration: none; 
 }
 
 .reset {
-    background: white;
+    background-image: linear-gradient(to right, #123dbe 0%, #651414  51%, #000000  100%);
 }
 .reset:hover {
-    border: 2px solid black;    
+    background-position: right center;
+    color: #fff;
+    text-decoration: none; 
+}
+
+.my-list {
+    background-image: linear-gradient(to right, #12be5a 0%, #1941c5  51%, #47e010  100%);
+}
+
+.my-list:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none; 
 }
 
 /* /reader */
@@ -193,37 +206,49 @@ ul {
 li {
     text-align: center;
     list-style: none;
-    border-bottom: 5px solid black;
-    border-left: 5px solid black;
+    border-bottom: 7px solid white;
+    border-left: 7px solid white;
+    border-radius: 50%;
+    margin: -100px;
     margin-top: 15px;
     margin-bottom: 25px;
 }
 
+li:hover {
+    border-bottom: 7px solid #2dfdb4;
+    border-left: 7px solid #2dfdb4;
+}
+
+.title {
+    width: 100%;
+}
+
 .saleButton {
-    background: orange; 
+    background-image: linear-gradient(to left, #40ff2f 0%, #19f096  51%, #FF512F  100%);
 }
 .saleButton:hover {
-    border: 2px solid black;
+    background-position: right;
+    color: #fff;
+    text-decoration: none; 
 }
 
 .saleLink {
-    margin: 5px;
     color: black;
     text-decoration: none;
     padding: 0;
 }
 .saleLink:hover {
-    margin: 5px;
     color: black;
     text-decoration: none;
     padding: 0;
 }
 
 .listButton {
-    background: gray;
+    color: black;
 }
 .listButton:hover {
-    border: solid 2px black;
+    background-position: right;
+    text-decoration: none; 
 }
 
 .notAv {
@@ -233,13 +258,7 @@ li {
     cursor: not-allowed;
 }
 
-.my-list {
-    background-color: rgb(29, 220, 29);
-}
 
-.my-list:hover {
-    border: 2px solid black;
-}
 
 
 /* /reader/mylist */
@@ -249,10 +268,25 @@ li {
     text-align: left;
     list-style: none;
     border-bottom: 5px solid white;
-    border-left: 5px solid white;
-    margin-top: 15px;
-    padding-left: 1vw;
+    /* border-left: 5px solid white; */
+    /* margin-top: 15px; */
+    padding: 1vw;
     margin-bottom: 25px;
+}
+
+.left-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: beige;
+}
+
+.title-and-author {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    max-height: 300px;
+    overflow-y: scroll;
 }
 
 .innerbox_left {
@@ -272,13 +306,8 @@ li {
     height: auto;
 }
 
-.title-and-author {
-    display: flex;
-    flex-direction: column;
-    padding: 2vw;
-}
-
 .card-content {
+    width: 25px;
     padding-bottom: 5px;
 }
 
@@ -289,7 +318,7 @@ li {
 
 .infoLink {
     all: unset;
-    width: 100px;
+    width: 128px;
     text-align: center;
     background-color: white;
     margin-left: 2.5%;
@@ -302,12 +331,12 @@ li {
 .stars {
     text-align: center;
     background-color: orange;
-    width: 100px;
+    width: 128px;
     margin-left: 2.5%;
 }
 
 .no-rating {
-    width: 100px;
+    width: 128px;
     text-align: center;
     background-color: red;
 }
@@ -315,7 +344,7 @@ li {
 .remove {
     all: unset;
     background-color: rgb(209, 105, 105);
-    width: 100px;
+    width: 128px;
     text-align: center;
     margin-left: 2.5%;
 }
@@ -325,8 +354,8 @@ li {
 }
 
 .id-checker {
-    background-color: white;
-    width: 100px;
+    background-color: pink;
+    width: 128px;
     margin-left: 2.5%;
     text-align: center;
 }
