@@ -1,7 +1,6 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { BooksContext } from '../contexts/BooksContext.jsx';
 import { Rating } from './Rating.jsx';
-import uniqid from 'uniqid';
 
 export function MyList() {
     const { booksList } = useContext(BooksContext);

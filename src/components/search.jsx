@@ -27,8 +27,8 @@ export function SearchBooks() {
         return (
         <div className="box">            
             <div className="innerbox_left">
-            <h1>We Are Readers</h1>
-            <NavBar />          
+            <NavBar /> 
+            <h1>We Are Readers</h1>                     
                 <form onSubmit={handleSubmit}>                    
                     <fieldset>   
                         <legend>Search For Books</legend>
@@ -46,7 +46,7 @@ export function SearchBooks() {
                             <button className='submit' type="submit">Search</button>
                             <button className='reset' type="submit" onClick={resetInput} >reset</button>
                             <button className='my-list'><Link to="/reader/mylist">my List</Link></button>
-                            <button className='testing'><Link to="/test">TESTZONE</Link></button>
+                            {/* <button className='testing'><Link to="/test">TEST</Link></button> */}
                         </nav>
                     </fieldset>
                 </form>          

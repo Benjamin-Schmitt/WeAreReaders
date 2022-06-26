@@ -307,7 +307,6 @@ li:hover {
 }
 
 .card-content {
-    width: 25px;
     padding-bottom: 5px;
 }
 
@@ -364,4 +363,30 @@ li:hover {
     background-color: yellow;
     margin-left: 2.5%;
     text-align: center;
+}
+
+
+/* User Data */
+.user-data-outer {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.user-img {
+    width: 100px;
+}
+
+.user-data-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
 }

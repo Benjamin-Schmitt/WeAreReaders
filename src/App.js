@@ -8,14 +8,22 @@ import {
 import { Start } from './components/Start';
 import { Publisher } from './components/Publish.jsx';
 import { MyList } from './components/MyList.jsx';
-import { BooksContextProvider } from './contexts/BooksContext.jsx';
 import { Test } from './components/Test.jsx';
+/* import { NavBar } from './components/Navbar.jsx'; */
+import { DisplayUser } from './components/Login.jsx';
+
+/* import contexts */
+import { BooksContextProvider } from './contexts/BooksContext.jsx';
+import { UserContextProvider } from './contexts/UserContext.jsx';
 
 function App() {
   return (
+    <UserContextProvider>
      <BooksContextProvider>
         <Router>
-          <div className="App">  
+          <div className="App">
+            <DisplayUser />
+            {/* <NavBar /> later on*/}  
             <Routes>
               <Route path="*" element={<Start />} />
               <Route path="/publisher" element={<Publisher />} />
@@ -25,7 +33,8 @@ function App() {
             </Routes>
           </div>
         </Router>
-     </BooksContextProvider>
+      </BooksContextProvider>
+     </UserContextProvider>
   );
 }
 export default App;
