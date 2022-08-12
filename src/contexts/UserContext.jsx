@@ -10,7 +10,7 @@ function UserContextProvider(props) {
         password : "123",
         id : 0,
         img : 'UserOne.png',
-        data: [],
+        data: ['hello', '321'],
     },
     {
         name : "John",
@@ -18,7 +18,7 @@ function UserContextProvider(props) {
         password : "123",
         id : 1,
         img : 'UserTwo.png',
-        data: [],
+        data: ['test', '123'],
     },
 ]); 
     return (

@@ -16,16 +16,21 @@ import { DisplayUser } from './components/Login.jsx';
 import { BooksContextProvider } from './contexts/BooksContext.jsx';
 import { UserContextProvider } from './contexts/UserContext.jsx';
 
+
+/* import firebase, imported to display firebase object in console.log */
+import firebase from "./firebase";
+
+
+
 function App() {
   return (
-    <UserContextProvider>
+<UserContextProvider>
      <BooksContextProvider>
         <Router>
           <div className="App">
             <DisplayUser />
-            {/* <NavBar /> later on*/}  
             <Routes>
-              <Route path="*" element={<Start />} />
+              <Route path="*" element={<Start color={'black'} />} />
               <Route path="/publisher" element={<Publisher />} />
               <Route path="/reader" element={<SearchBooks />} />
               <Route path="/reader/mylist" element={<MyList />} />
