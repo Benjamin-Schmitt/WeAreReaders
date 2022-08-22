@@ -1,13 +1,13 @@
 import './App.css';
-import { SearchBooks } from './components/Search.jsx';
+import { SearchBooks } from './components/search.jsx';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import { Start } from './components/Start';
-import { Publisher } from './components/Publish.jsx';
-import { MyList } from './components/MyList.jsx';
+import { Start } from './components/start';
+import { Publisher } from './components/publish.jsx';
+import { MyList } from './components/myList.jsx';
 import { Test } from './components/Test.jsx';
 /* import { NavBar } from './components/Navbar.jsx'; */
 import { DisplayUser } from './components/Login.jsx';
