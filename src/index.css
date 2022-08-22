@@ -7,6 +7,10 @@ body {
     background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 
+#root {
+    margin: auto;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -51,7 +55,6 @@ a {
 /* /reader */
 /* GENERAL */
 .box {
-    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -121,8 +124,6 @@ legend {
     color: black;
     font-size: 175%;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -159,6 +160,7 @@ button {
     border-radius: 10px; 
     border: 1.5px solid black; 
 }
+
 
 .submit {      
     background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
@@ -251,6 +253,16 @@ li:hover {
     text-decoration: none; 
 }
 
+/* 
+.listButton::after {
+    content: "";
+    height: 0.25em;
+    display: flex;
+    border-radius: 0.5em;
+    background-color: #12be5a;
+} */
+
+
 .notAv {
     background: red;
 }
@@ -294,7 +306,7 @@ li:hover {
     flex-direction: column;
     justify-content: flex-start; 
     align-items: center;  
-    margin-right: 2.5%;
+    /* margin-right: 2.5%; */
 }
 
 .list-img {
@@ -367,14 +379,18 @@ li:hover {
 
 
 /* User Data */
-.user-data-outer {
-    width: 300px;
+.login-outer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
+    margin: 15px;
+}
+
+.user-data-outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
     border: 1px solid black;
     background-color: white;
 }
@@ -390,3 +406,24 @@ li:hover {
     align-items: flex-start;
     margin-left: 10px;
 }
+
+
+.login-field {
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid black;
+    margin-left: 25px;
+    margin-right: 15px;
+}
+
+
+.login-button {
+    all: unset;
+    width: 50px;
+    height: 20px;
+    border: 1px solid black;
+    color: black;
+    margin-top: 2px;
+    cursor: pointer;
+}
+

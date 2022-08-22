@@ -1,16 +1,18 @@
 import { useContext } from 'react';
 import { BooksContext } from '../contexts/BooksContext.jsx';
 import uniqid from 'uniqid';
+import { UserContext } from '../contexts/UserContext.jsx';
 
 export const BookCard = (props) => {
     const { booksList, setBooksList } = useContext(BooksContext);    
-     
+    const { setUser } = useContext(UserContext);
+
     const addBooks = () => {
         //giving it a uniqe id
         props.book.volumeInfo.myUniqueId = uniqid();
+        
         //"feeding" BooksContext
         setBooksList(booksInList => [...booksInList, props.book.volumeInfo]);
-        console.log(booksList)
     }    
     
     const forSale = () => {
@@ -20,7 +22,11 @@ export const BookCard = (props) => {
                     <a href={props.book.saleInfo.buyLink} className="saleLink">kaufen</a>
                 </button>,
                 
-                <button key={props.index+1} className="listButton" onClick={addBooks}>
+                <button 
+                key={props.index+1} 
+                className="listButton" 
+                onClick={addBooks}
+                >
                     add to list
                 </button>
              ]
